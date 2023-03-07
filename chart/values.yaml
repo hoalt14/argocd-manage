@@ -1,0 +1,16 @@
+# Global Values
+repoUrl: 'https://github.com/hoalt14/eks-add-ons.git'
+targetRevision: HEAD
+region: ''
+account: ''
+clusterName: ''
+
+# Keda Values
+keda:
+  enable: false
+  createNamespace: true
+  serviceAccountName:
+
+# Metrics Server Values
+metricsServer:
+  enable: false
