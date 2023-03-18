@@ -4,6 +4,42 @@ targetRevision: HEAD
 region: ''
 account: ''
 clusterName: ''
+destinationServer: ''
+argoNamespace: ''
+argoProject: ''
+
+# Argo Rollout Values
+argoRollouts:
+  enable: false
+  createNamespace: true
+
+# Argo Rollout Values
+argoWorkflows:
+  enable: false
+
+# AWS CloudWatch Metrics Values
+awsCloudWatchMetrics:
+  enable: false
+  createNamespace: true
+  serviceAccountName:
+
+# AWS for Fluent Bit Values
+awsForFluentBit:
+  enable: false
+  createNamespace: true
+  logGroupName:
+  serviceAccountName:
+
+# Cert Manager Values
+certManager:
+  enable: false
+  createNamespace: true
+  serviceAccountName:
+
+# Cluster Autoscaler Values
+clusterAutoscaler:
+  enable: false
+  serviceAccountName:
 
 # Keda Values
 keda:
@@ -13,4 +49,8 @@ keda:
 
 # Metrics Server Values
 metricsServer:
+  enable: false
+
+# Kube Prometheus Stack
+kubePrometheusStack:
   enable: false
