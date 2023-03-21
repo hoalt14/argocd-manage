@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-frontend
+  labels:
+    app: demo-frontend
+  namespace: microservices-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: demo-frontend
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: demo-frontend
+    spec:
+      containers:
+        - image: brentley/ecsdemo-frontend:latest
+          imagePullPolicy: Always
+          name: demo-frontend
+          ports:
+            - containerPort: 3000
+              protocol: TCP
+          env:
+            - name: CRYSTAL_URL
+              value: "http://demo-crystal.default.svc.cluster.local/crystal"
+            - name: NODEJS_URL
+              value: "http://demo-nodejs.default.svc.cluster.local/"

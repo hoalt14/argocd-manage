@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-nodejs
+  labels:
+    app: demo-nodejs
+  namespace: microservices-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: demo-nodejs
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: demo-nodejs
+    spec:
+      containers:
+        - image: brentley/ecsdemo-nodejs:latest
+          imagePullPolicy: Always
+          name: demo-nodejs
+          ports:
+            - containerPort: 3000
+              protocol: TCP
