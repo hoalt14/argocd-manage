@@ -1,5 +1,5 @@
 # Global Values
-repoUrl: 'https://github.com/hoalt14/eks-add-ons.git'
+repoUrl: 'https://github.com/hoalt14/argocd-manage.git'
 targetRevision: HEAD
 region: ''
 account: ''
