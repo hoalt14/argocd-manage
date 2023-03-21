@@ -1,1 +1,1 @@
-# eks-add-ons
+# ArgoCD manage add-ons & workloads
