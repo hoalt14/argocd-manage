@@ -10,7 +10,7 @@ spec:
   project: {{ .Values.argoProject | default "default" }}
   source:
     repoURL: {{ .Values.repoUrl }}
-    path: add-ons/argo-rollouts
+    path: addons/add-ons/argo-rollouts
     targetRevision: {{ .Values.targetRevision }}
     helm:
       values: |

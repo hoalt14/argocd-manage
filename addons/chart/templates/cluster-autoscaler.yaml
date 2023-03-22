@@ -10,7 +10,7 @@ spec:
   project: {{ .Values.argoProject | default "default" }}
   source:
     repoURL: {{ .Values.repoUrl }}
-    path: add-ons/cluster-autoscaler
+    path: addons/add-ons/cluster-autoscaler
     targetRevision: {{ .Values.targetRevision }}
     helm:
       values: |

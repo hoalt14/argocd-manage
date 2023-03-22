@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     repoURL: {{ .Values.repoUrl }}
-    path: add-ons/keda
+    path: addons/add-ons/keda
     targetRevision: {{ .Values.targetRevision }}
     helm:
       values: |
