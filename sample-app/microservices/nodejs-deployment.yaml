@@ -4,7 +4,6 @@ metadata:
   name: demo-nodejs
   labels:
     app: demo-nodejs
-  namespace: microservices-app
 spec:
   replicas: 3
   selector:

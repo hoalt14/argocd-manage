@@ -4,7 +4,6 @@ metadata:
   name: demo-frontend
   labels:
     app: demo-frontend
-  namespace: microservices-app
 spec:
   replicas: 3
   selector:

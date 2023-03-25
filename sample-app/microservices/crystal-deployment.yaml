@@ -4,7 +4,6 @@ metadata:
   name: demo-crystal
   labels:
     app: demo-crystal
-  namespace: microservices-app
 spec:
   replicas: 3
   selector:
