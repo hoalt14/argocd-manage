@@ -6,7 +6,7 @@ metadata:
     app: demo-crystal
   namespace: default
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: demo-crystal
