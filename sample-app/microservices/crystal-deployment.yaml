@@ -4,6 +4,7 @@ metadata:
   name: demo-crystal
   labels:
     app: demo-crystal
+  namespace: default
 spec:
   replicas: 3
   selector:

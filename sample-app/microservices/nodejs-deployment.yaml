@@ -4,6 +4,7 @@ metadata:
   name: demo-nodejs
   labels:
     app: demo-nodejs
+  namespace: default
 spec:
   replicas: 3
   selector:

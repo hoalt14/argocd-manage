@@ -4,6 +4,7 @@ metadata:
   name: demo-frontend
   labels:
     app: demo-frontend
+  namespace: default
 spec:
   replicas: 3
   selector:
